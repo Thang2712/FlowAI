@@ -1,5 +1,7 @@
 # FlowAI – Landing Page 
 
+🔗 **Live demo:** https://thang2712.github.io/FlowAI/ 
+
 A landing page for **FlowAI**, a fictional AI-powered task management app.
 Built with semantic HTML5 and pure CSS as a front-end practice exercise.
 
@@ -32,9 +34,9 @@ Built with semantic HTML5 and pure CSS as a front-end practice exercise.
 
 ## Getting Started
 
-Clone the repo and open `idx.html` in your browser.
+Clone the repo and open `index.html` in your browser.
 No build step required.
 
 ## Author
 
-**Teejaze**
+**Teejaze** – [GitHub](https://github.com/Thang2712)
