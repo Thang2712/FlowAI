@@ -1,0 +1,470 @@
+/*CHUNG*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #14142b;
+  line-height: 1.6;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+}
+
+/*HEADER*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav > p:last-child {
+  background-color: #6c63ee;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+/*HERO*/
+section:first-of-type {
+  display: grid;
+  grid-template-columns: auto auto 1fr 1fr;  /* cột 1, 2 cho 2 nút; cột 4 cho checklist */
+  gap: 10px 12px;
+  align-items: start;
+}
+
+/* mọi thứ nằm bên trái */
+section:first-of-type > * {
+  grid-column: 1 / 4;
+}
+
+section:first-of-type h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+section:first-of-type h1 span {
+  color: #6c63ee;
+}
+
+/* 2 nút nằm cạnh nhau */
+section:first-of-type > a {
+  padding: 10px 22px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+section:first-of-type > a:nth-of-type(1) {
+  grid-column: 1;
+  background-color: #6c63ee;
+  border-color: #6c63ee;
+  color: white;
+}
+
+section:first-of-type > a:nth-of-type(2) {
+  grid-column: 2;
+}
+
+/*thống kê*/
+section:first-of-type > ul {
+  display: flex;
+  gap: 30px;
+}
+
+/*thẻ checklist bên phải*/
+section:first-of-type > div {
+  grid-column: 4;
+  grid-row: 1 / 6;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+section:first-of-type > div li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #f3f3f7;
+  border-radius: 8px;
+}
+
+/*TÍNH NĂNG*/
+section:nth-of-type(2) > p {
+  text-align: center;
+}
+
+section:nth-of-type(2) > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+section:nth-of-type(2) li {
+  padding: 20px;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+/*CÁCH HOẠT ĐỘNG*/
+section:nth-of-type(3) {
+  text-align: center;
+  background-color: #f8f8fb;
+  max-width: none;   /* cho nền xám trải hết chiều ngang */
+}
+
+section:nth-of-type(3) ol {
+  display: flex;
+  gap: 30px;
+  max-width: 960px;
+  margin: 30px auto 0;
+}
+
+section:nth-of-type(3) li {
+  flex: 1;
+}
+
+/*BẢNG GIÁ*/
+section:nth-of-type(4) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px 20px;
+  text-align: center;
+}
+
+/*tiêu đề trải hết 3 cột*/
+section:nth-of-type(4) > p,
+section:nth-of-type(4) > h2 {
+  grid-column: 1 / -1;
+}
+
+/*mỗi gói: ul ở hàng 4, nút ở hàng 5*/
+section:nth-of-type(4) > ul:nth-of-type(1) { grid-column: 1; grid-row: 4; }
+section:nth-of-type(4) > ul:nth-of-type(2) { grid-column: 2; grid-row: 4; }
+section:nth-of-type(4) > ul:nth-of-type(3) { grid-column: 3; grid-row: 4; }
+section:nth-of-type(4) > a:nth-of-type(1) { grid-column: 1; grid-row: 5; }
+section:nth-of-type(4) > a:nth-of-type(2) { grid-column: 2; grid-row: 5; }
+section:nth-of-type(4) > a:nth-of-type(3) { grid-column: 3; grid-row: 5; }
+
+section:nth-of-type(4) > ul > li {
+  padding: 20px;
+  text-align: left;
+  background-color: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+/*gói Pro viền tím*/
+section:nth-of-type(4) > ul:nth-of-type(2) > li {
+  border: 2px solid #6c63ee;
+}
+
+section:nth-of-type(4) > a {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+section:nth-of-type(4) > a:nth-of-type(2) {
+  background-color: #6c63ee;
+  border-color: #6c63ee;
+  color: white;
+}
+
+/*ĐÁNH GIÁ*/
+section:nth-of-type(5) > ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+section:nth-of-type(5) li {
+  padding: 18px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+section:nth-of-type(5) > p:first-child,
+section:nth-of-type(3) > p:first-child,
+section:nth-of-type(4) > p:first-child {
+  color: #6c63ee;
+  font-size: 13px;
+}
+
+section:nth-of-type(5) > p:first-child {
+  text-align: center;
+}
+
+/*CTA CUỐI TRANG*/
+section:nth-of-type(6) {
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+  background-color: #8b5cf6;
+  border-radius: 20px;
+}
+
+/*FOOTER*/
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px 20px;
+  border-top: 1px solid #eee;
+  display: grid;
+  grid-template-columns: 1fr 2fr;   /* trái: thương hiệu, phải: 3 cột liên kết */
+  column-gap: 40px;
+}
+
+footer h3 {
+  margin: 0;
+}
+
+/*cột trái: tên + mô tả*/
+footer > h3 {
+  grid-column: 1;
+  font-size: 18px;
+}
+
+footer > p:first-of-type {
+  grid-column: 1;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #667085;
+}
+
+/*cột phải*/
+footer nav {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;   /*hàng 1: tiêu đề, hàng 2: danh sách */
+  grid-auto-flow: column;         /*xếp theo cột: h3, ul, h3, ul, ... */
+  gap: 12px 20px;
+  padding: 0;
+  border: none;
+}
+
+footer nav h3 {
+  font-size: 15px;
+}
+
+footer nav ul {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+}
+
+footer nav a {
+  font-size: 14px;
+  color: #667085;
+}
+
+footer nav a:hover {
+  color: #6c63ee;
+}
+
+/*dòng bản quyền*/
+footer > p:last-child {
+  grid-column: 1 / -1;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+  color: #667085;
+}
+
+/*ICON*/
+
+/*logo*/
+nav > p:first-child::before {
+  content: "⚡ ";
+}
+
+/*huy hiệu phiên bản mới*/
+section:first-of-type > p:nth-of-type(1)::before {
+  content: "✨ ";
+}
+
+/*icon cho 6 thẻ tính năng*/
+section:nth-of-type(2) li::before {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+section:nth-of-type(2) li:nth-child(1)::before { content: "🧠"; }
+section:nth-of-type(2) li:nth-child(2)::before { content: "📅"; }
+section:nth-of-type(2) li:nth-child(3)::before { content: "👥"; }
+section:nth-of-type(2) li:nth-child(4)::before { content: "📊"; }
+section:nth-of-type(2) li:nth-child(5)::before { content: "🔗"; }
+section:nth-of-type(2) li:nth-child(6)::before { content: "🔒"; }
+
+/*dấu ✓ trước các quyền lợi trong bảng giá*/
+section:nth-of-type(4) li li::before {
+  content: "✓ ";
+  color: #22c55e;
+}
+
+/*5 ngôi sao trong phần đánh giá*/
+section:nth-of-type(5) blockquote::before {
+  content: "★★★★★";
+  display: block;
+  color: #f59e0b;
+}
+
+/*thêm vòng tròn số*/
+section:nth-of-type(3) ol {
+  counter-reset: step;          /*bắt đầu đếm từ 0*/
+}
+
+section:nth-of-type(3) li {
+  counter-increment: step;      /*mỗi li tăng 1*/
+}
+
+section:nth-of-type(3) li::before {
+  content: counter(step, decimal-leading-zero);   /* 01, 02, 03 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background-color: #e9e8fc;
+  color: #6c63ee;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+section:nth-of-type(3) h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+section:nth-of-type(3) li p {
+  max-width: 240px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #667085;
+}
+
+
+section:nth-of-type(5) li {
+  display: flex;
+  flex-direction: column;     /* xếp dọc: sao, lời nhận xét, tên, chức vụ */
+}
+
+section:nth-of-type(5) blockquote {
+  margin: 0 0 18px;           /* bỏ lề trái 40px mặc định của blockquote */
+  flex: 1;                    /* đẩy tên + chức vụ xuống đáy thẻ */
+  font-size: 14px;
+  color: #667085;
+}
+
+section:nth-of-type(5) blockquote p {
+  margin: 0;                  /* bỏ khoảng cách thừa của thẻ p */
+}
+
+section:nth-of-type(5) blockquote::before {
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+section:nth-of-type(5) li > p {
+  margin: 0;
+}
+
+section:nth-of-type(5) li > p:nth-of-type(1) {
+  font-size: 14px;
+  font-weight: bold;          /* tên in đậm */
+}
+
+section:nth-of-type(5) li > p:nth-of-type(2) {
+  font-size: 12px;
+  color: #667085;             /* chức vụ nhỏ, màu xám */
+}
+
+/*ô email + nút nằm cùng hàng*/
+section:nth-of-type(6) {
+  display: grid;
+  grid-template-columns: 300px auto;   /* cột 1: ô email, cột 2: nút */
+  justify-content: center;             /* căn giữa 2 cột */
+  gap: 0 12px;
+  background-image: linear-gradient(135deg, #6c63ee, #a855f7, #ec4899);
+}
+
+section:nth-of-type(6) h2 {
+  grid-column: 1 / -1;                 /* tiêu đề trải hết 2 cột */
+  margin: 0 0 12px;
+}
+
+section:nth-of-type(6) p {
+  margin: 0;
+}
+
+/* đoạn mô tả */
+section:nth-of-type(6) > p:nth-of-type(1) {
+  grid-column: 1 / -1;
+  max-width: 420px;
+  margin: 0 auto 24px;
+  font-size: 14px;
+}
+
+/* ô nhập email */
+section:nth-of-type(6) > p:nth-of-type(2) {
+  padding: 12px 20px;
+  background-color: white;
+  color: #999;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 20px;
+}
+
+/* nút Bắt đầu ngay */
+section:nth-of-type(6) > p:nth-of-type(3) {
+  padding: 12px 22px;
+  background-color: #14142b;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+/* dòng ghi chú nhỏ */
+section:nth-of-type(6) > p:nth-of-type(4) {
+  grid-column: 1 / -1;
+  margin-top: 16px;
+  font-size: 12px;
+}
